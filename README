@@ -1,0 +1,50 @@
+REQUIREMENTS:
+=============
+    1. Python 2.7
+    2. SciPy module
+        This can be Installed using the following command:
+            sudo apt-get install python-scipy
+
+USAGE:
+======
+    Following command can be used to run the code:
+        python driver.py
+
+OUTPUT:
+=======
+    1. The output is generated in the format shown in OUTPUT EXAMPLE section.
+    2. First the output is generated for the 25 instances (5 graphs and 5 source dest pairs)
+       of sparse graph followed by the 25 instances of Dense graph. At the end of each part
+       (sparse and dense) an average time analysis is printed.
+    3. Currently the output is dumped in the stdout, If user wants to redirect it to a file
+       Unix's tee utility can be used. Run the following command to redirect output to a file
+       as well along with the stdout.
+           python driver.py |& tee log
+
+    NOTE: The dense graph takes a long time to complete. In my system each instance of dense graph
+          took around 6-7 mins to complete (all 3 algorithms).
+
+
+
+
+
+OUTPUT EXAMPLE:
+===============
+    ""========================= Graph 1=========================
+    ============= Vertices = 5000 Degree = 1000 ==============
+    ===========================================================
+
+    Generating Graph...
+    Graph Generated.
+    ========================================
+    ['Dijkstra without heap', '9.8928 secs', 'source: 1460 Dest: 3303', 'max_bw: 1998'] 
+
+    ['Dijkstra with heap   ', '5.8484 secs', 'source: 1460 Dest: 3303', 'max_bw: 1998'] 
+
+    ...........
+    ...........
+    ""
+
+
+
+        
